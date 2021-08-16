@@ -1,0 +1,4 @@
+https://jakevdp.github.io/PythonDataScienceHandbook/
+https://github.com/datapublishings/Course-python-data-science
+https://www.youtube.com/watch?v=JDcZBzb46ts
+https://www.dataquest.io/blog/python-api-tutorial/
