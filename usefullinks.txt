@@ -4,3 +4,4 @@ https://www.youtube.com/watch?v=JDcZBzb46ts
 https://www.dataquest.io/blog/python-api-tutorial/
 https://www.openbookproject.net/books/bpp4awd/index.html
 https://www.cs.cornell.edu/courses/cs1110/2013fa/exams/index.php.html
+https://www.programiz.com/python-programming/methods/built-in/sorted
