@@ -14,10 +14,18 @@ def second():
 def marks():
     return render_template('marks.html')
 
-@app.route('/submitform/',method=['post'])
+@app.route('/submitform/',methods=['post'])
 def submitform():
 	result = request.form
-	return render_template('result.html',result=result)
-
+	return render_template('result2.html',result=result)
+@app.route('/fileupload/')
+def upload():  
+    return render_template("fileupload.html")  
+ 
+@app.route('/savefile', methods = ['POST'])  
+def savefile():  
+    f = request.files['userfile']  
+    f.save(f.filename)  
+    return render_template("success.html", name = f.filename)  
 if __name__ == '__main__':
    app.run(debug=True)
