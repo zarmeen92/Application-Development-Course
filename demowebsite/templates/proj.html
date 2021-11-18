@@ -1,0 +1,39 @@
+<!Doctype html>
+<html>
+	<body>
+	<h1>[Enter your Project Title Here]</h1>
+	<h3> Team Members Info </h3>
+	<table border="1">
+	  <tr>
+		<th>S.No</th>
+		<th>ERP ID</th>
+		<th>Name</th>
+	  </tr>
+	  <tr>
+		<td>1</td>
+		<td>[Team Member#ERPID]</td>
+		<td>[Team Member]</td>
+	  </tr>
+	  <tr>
+		<td>2</td>
+		<td>[Team Member#ERPID]</td>
+		<td>[Team Member]</td>
+	  </tr>
+	</table>
+	
+	<form action={{url_for('submitProj')}} method='post'>
+	<p>Name <input type = "text" name = "Name" /></p>
+    <label>Description</label>
+	<textarea name="desc" rows="10" cols="30">
+	</textarea>
+	</p>
+    <label for="difficultyLevel">Choose Difficulty Level:</label>
+	<select id="diff" name="diff">
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	</select>
+    <p><input type = "submit" value = "submit" /></p>
+    </form>
+   </body>
+</html> 
