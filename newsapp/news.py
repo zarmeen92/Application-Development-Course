@@ -7,9 +7,11 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 	url = 'https://api.thenewsapi.com/v1/news/top?api_token=U4kBMfgXdiPDGs4VLmlVZ8ZhPlZ4z9u0vYrAB5yo&locale=us&limit=5'
-	response = requests.get(url).json()
-	print(response['data'])
-	return render_template('index.html',news=response['data'])
+	response = requests.get(url)
+	# print status code
+	print(response.status_code)
+	content = response.json()
+	return render_template('index.html',news=content['data'])
 @app.route('/searchnews',methods=['POST'])
 def searchnews():
 	query=request.form

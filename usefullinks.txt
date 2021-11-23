@@ -5,3 +5,8 @@ https://www.dataquest.io/blog/python-api-tutorial/
 https://www.openbookproject.net/books/bpp4awd/index.html
 https://www.cs.cornell.edu/courses/cs1110/2013fa/exams/index.php.html
 https://www.programiz.com/python-programming/methods/built-in/sorted
+
+#Dash
+https://www.datacamp.com/community/tutorials/learn-build-dash-python
+https://medium.com/plotly/introducing-dash-5ecf7191b503
+https://towardsdatascience.com/dash-for-beginners-create-interactive-python-dashboards-338bfcb6ffa4

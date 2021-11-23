@@ -9,9 +9,9 @@ def index():
 @app.route('/submitform/',methods=['post'])
 def submitform():
 	result = request.form
-	print(result)
+	#print(result)
 	#return result
-	return 'Form Submitted'
+	return render_template('result.html',result=result)
 
 @app.route('/second')
 def second():
