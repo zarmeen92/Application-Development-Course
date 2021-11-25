@@ -1,0 +1,15 @@
+tail -f dataread.log
+tail -f myoutput.log
+1047958.6532952785
+0.953184869024
+
+Iterations = 1500
+https://janakiev.com/til/python-background/
+pscp znasim@ritchie.iba.edu.pk:/home/znasim/urducrftagger/data-urdu-pos-complete.csv C:/temp-crf
+export PATH=~/anaconda3/bin:$PATH
+conda install -c conda-forge tensorflow
+conda install -c anaconda keras
+git clone https://www.github.com/keras-team/keras-contrib.git
+pip install git+https://www.github.com/keras-team/keras-contrib.git
+nohup conda install -c conda-forge tensorflow==1.5 > tensorinstall.log &
+tail -f tensorinstall.log 
