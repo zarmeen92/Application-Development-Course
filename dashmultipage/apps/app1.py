@@ -1,26 +1,22 @@
 from dash import html
 from dash import dcc
 from dash.dependencies import Input, Output
+from app import app,dataset
+import plotly.express as px
+import pandas as pd
+import numpy as np
 
-from app import app
+dataset['Date'] = pd.to_datetime(dataset['Date'])
+datewise_add = dataset.pivot_table(index=['Date'],aggfunc=np.sum)
 
-layout = html.Div([
-    html.H3('App 1'),
-    dcc.Dropdown(
-        id='app-1-dropdown',
-        options=[
-            {'label': 'App 1 - {}'.format(i), 'value': i} for i in [
-                'NYC', 'MTL', 'LA'
-            ]
-        ]
-    ),
-    html.Div(id='app-1-display-value'),
-    
-])
+def recovered_cases():
+	fig = px.line(datewise_add, x=datewise_add.index, y=datewise_add['Recovered'], title="Trend analysis of Recovered Cases") 
+	return fig
 
 
-@app.callback(
-    Output('app-1-display-value', 'children'),
-    Input('app-1-dropdown', 'value'))
-def display_value(value):
-    return 'You have selected "{}"'.format(value)
+layout = html.Div(id = 'parent', children = [
+    html.H1(id = 'H1', children = 'Page 1', style = {'textAlign':'center'}),
+    dcc.Graph(id = 'line_plot1', figure = recovered_cases()),
+	])
+
+

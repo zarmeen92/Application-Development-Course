@@ -7,7 +7,7 @@ from apps import app1, app2
 
 
 app.layout = html.Div([
-    dcc.Location(id='url', refresh=False),
+    dcc.Location(id='url'),
 	dcc.Link('Go to App 1', href='/apps/app1'),
 	html.Hr(),
 	dcc.Link('Go to App 2', href='/apps/app2'),
