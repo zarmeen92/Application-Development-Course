@@ -4,13 +4,11 @@ app = Flask(__name__)
 @app.route('/')
 def index():
    #return 'Hello World'
-	return render_template('marks.html')
+   return render_template('marks.html')
 
 @app.route('/submitform/',methods=['post'])
 def submitform():
 	result = request.form
-	#print(result)
-	#return result
 	return render_template('result.html',result=result)
 
 @app.route('/second')

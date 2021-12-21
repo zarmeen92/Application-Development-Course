@@ -3,14 +3,7 @@
    <body>
       <table border = 1>
          {% for key, value in result.items() %}
-		 {% if value|int > 80 and key == "appdev" %}
-			<h1> Grade: A</h1>
-		 {% elif value|int > 60 and key == "appdev" %}
-			<h1> Grade: B</h1>
-		 {% elif value|int > 30 and key == "appdev" %}
-			<h1> Grade: C</h1>
-		 {% endif %}
-            <tr>
+		    <tr>
                <td> {{ key }} </td>
                <td> {{ value }} </td>
             </tr>
